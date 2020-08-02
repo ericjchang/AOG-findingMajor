@@ -8,9 +8,13 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
+            msg: `Name can't be empty`,
+          },
+          notNull: {
             msg: `Name can't be empty`,
           },
           len: {
@@ -21,10 +25,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Email can't be empty`,
+          },
+          notNull: {
+            msg: `Email can't be empty`,
           },
           isEmail: {
             args: `Please enter a valid email format`,
@@ -37,10 +45,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       phone: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Phone number can't be empty`,
+          },
+          notNull: {
+            msg: `Phone number can't be empty`,
           },
           len: {
             args: [5, 999],
@@ -50,10 +62,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       address: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Address can't be empty`,
+          },
+          notNull: {
+            msg: `Address can't be empty`,
           },
           len: {
             args: [8, 999],
@@ -63,19 +79,27 @@ module.exports = (sequelize, DataTypes) => {
       },
       status: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Status can't be empty`,
+          },
+          notNull: {
+            msg: `Status can't be empty`,
           },
         },
       },
       major: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Major can't be empty`,
+          },
+          notNull: {
+            msg: `Major can't be empty`,
           },
           len: {
             args: [5, 999],
@@ -85,10 +109,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       institution: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Institution can't be empty`,
+          },
+          notNull: {
+            msg: `Institution can't be empty`,
           },
           len: {
             args: [5, 999],
@@ -98,10 +126,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       region: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notEmpty: {
             args: true,
-            msg: `can't be empty`,
+            msg: `Region can't be empty`,
+          },
+          notNull: {
+            msg: `Region can't be empty`,
           },
           len: {
             args: [5, 999],

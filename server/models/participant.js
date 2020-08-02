@@ -35,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
             msg: `Email can't be empty`,
           },
           isEmail: {
-            args: `Please enter a valid email format`,
+            args: true,
+            msg: `Please enter a valid email format`,
           },
         },
         unique: {

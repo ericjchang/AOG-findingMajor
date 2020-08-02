@@ -1,0 +1,33 @@
+{
+  "name": "server-finding-major",
+  "version": "1.0.0",
+  "description": "Server for finding major registration, and main panel for admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "finding major",
+    "aog",
+    "gms sidoarjo",
+    "gms"
+  ],
+  "author": "Eric J. Chang",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bull": "^3.16.0",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.4.11",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.3"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

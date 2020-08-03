@@ -78,6 +78,19 @@ class participantController {
         next(err);
       });
   }
+
+  static findEmail(req, res, next) {
+    const { email } = req.body;
+    Participant.findOne({
+      where: { email },
+    })
+      .then((result) => {
+        res.status(200).json({ result });
+      })
+      .catch((err) => {
+        next(err);
+      });
+  }
 }
 
 module.exports = participantController;

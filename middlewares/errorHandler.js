@@ -6,6 +6,7 @@ function errorHandler(err, req, res, next) {
   let errorCode;
   const validationErr = [];
 
+  console.log(err);
   switch (err.name) {
     case 'SequelizeValidationError':
       statusCode = 400;

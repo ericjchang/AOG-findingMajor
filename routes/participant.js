@@ -3,6 +3,7 @@ const Controller = require('../controllers/participant');
 const { authentication } = require('../middlewares/auth');
 
 routes.post('/', Controller.create);
+routes.post('/email', Controller.findEmail);
 
 routes.use(authentication);
 routes.get('/', Controller.findAll);

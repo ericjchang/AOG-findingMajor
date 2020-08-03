@@ -115,10 +115,6 @@ module.exports = (sequelize, DataTypes) => {
           notNull: {
             msg: `Institution can't be empty`,
           },
-          len: {
-            args: [5, 999],
-            msg: `Institution length must be more then 5 characters`,
-          },
         },
       },
       region: {

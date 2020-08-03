@@ -102,10 +102,6 @@ module.exports = (sequelize, DataTypes) => {
           notNull: {
             msg: `Major can't be empty`,
           },
-          len: {
-            args: [5, 999],
-            msg: `Major length must be more then 5 characters`,
-          },
         },
       },
       institution: {

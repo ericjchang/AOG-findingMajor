@@ -1,7 +1,8 @@
 'use strict';
-const { Participant } = require('../models');
+const { Participant, sequelize } = require('../models');
 const Op = require('sequelize').Op;
 const registrationEmail = require('../helpers/queueSendEmail');
+const moment = require('moment');
 
 class participantController {
   static create(req, res, next) {
@@ -19,7 +20,7 @@ class participantController {
 
     Participant.create(data)
       .then((result) => {
-        registrationEmail(data.email);
+        // registrationEmail(data.email);
         res.status(201).json({ message: 'Created successfully', name: result.name, email: result.email });
       })
       .catch((err) => {

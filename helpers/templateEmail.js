@@ -373,7 +373,7 @@ let template = `<!DOCTYPE html>
                             <ul>
                               <li style="text-align: left;">
                                 <span style="font-size: 18px;"
-                                  >Acara akan diadakan pada tanggal <strong>20 Agustus 2020</strong> via Live Youtube!
+                                  >Acara akan diadakan pada tanggal <strong>20 Agustus 2020</strong> via Online Live!
                                   detail link dan informasi lebih lanjut akan dikirim via email ini.
                                 </span>
                               </li>
@@ -395,7 +395,7 @@ let template = `<!DOCTYPE html>
                               <span style="font-size: 18px;"
                                 >All right, that&apos;s all guys.. kalau kalian ada pertanyaan feel free buat kirim
                                 email ke <a href="mailto:it@gmssidoarjo.com">it@gmssidoarjo.com</a> atau Whatsapp ke
-                                <a href="https://wa.me/message/CFWYT3EOFQ4TO1" target="_blank">sini.</a> Have a good
+                                <a href="https://wa.me/message/6AVU45T53BPID1" target="_blank">+6289667716771</a> Have a good
                                 day.. God Bless..</span
                               >
                             </p>

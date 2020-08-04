@@ -5,7 +5,7 @@ const Op = require('sequelize').Op;
 const axios = require('axios');
 
 let job = new CronJob(
-  '0 0 10 * * *',
+  '0 0 6 * * *',
   () => {
     Participant.findAndCountAll({
       where: {

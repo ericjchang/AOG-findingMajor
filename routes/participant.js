@@ -7,6 +7,7 @@ routes.post('/email', Controller.findEmail);
 
 routes.use(authentication);
 routes.get('/', Controller.findAll);
+routes.get('/count', Controller.groupAndCount);
 routes.put('/:id', Controller.update);
 routes.delete('/:id', Controller.delete);
 

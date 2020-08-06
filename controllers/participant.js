@@ -1,5 +1,5 @@
 'use strict';
-const { Participant } = require('../models');
+const { Participant, sequelize } = require('../models');
 const Op = require('sequelize').Op;
 const registrationEmail = require('../helpers/queueSendEmail');
 
@@ -85,6 +85,19 @@ class participantController {
     const { email } = req.body;
     Participant.findOne({
       where: { email },
+    })
+      .then((result) => {
+        res.status(200).json({ result });
+      })
+      .catch((err) => {
+        next(err);
+      });
+  }
+
+  static groupAndCount(req, res, next) {
+    Participant.findAll({
+      group: ['region'],
+      attributes: ['region', [sequelize.fn('COUNT', 'region'), 'total']],
     })
       .then((result) => {
         res.status(200).json({ result });

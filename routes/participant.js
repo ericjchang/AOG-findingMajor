@@ -5,9 +5,9 @@ const { authentication } = require('../middlewares/auth');
 routes.post('/', Controller.create);
 routes.post('/email', Controller.findEmail);
 
-routes.use(authentication);
 routes.get('/', Controller.findAll);
 routes.get('/count', Controller.groupAndCount);
+routes.get('/parse', Controller.parseGroup);
 routes.put('/:id', Controller.update);
 routes.delete('/:id', Controller.delete);
 

@@ -134,6 +134,9 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      group: {
+        type: DataTypes.INTEGER,
+      },
     },
     { sequelize }
   );

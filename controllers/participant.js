@@ -106,6 +106,31 @@ class participantController {
         next(err);
       });
   }
+
+  static parseGroup(req, res, next) {
+    let count = 0; // total participants
+    let group = 1; // total group
+    for (let i = 13; i <= 244; i++) {
+      if (count === 43) {
+        count = 0;
+        group++;
+      }
+      count++;
+      Participant.update(
+        { group },
+        {
+          where: { id: +i },
+        }
+      )
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    res.status(200).json({ message: `Parsing group done` });
+  }
 }
 
 module.exports = participantController;

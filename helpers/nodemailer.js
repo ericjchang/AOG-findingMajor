@@ -1,5 +1,6 @@
 'use strict';
 const nodemailer = require('nodemailer');
+const axios = require('axios');
 let template = require('./templateEmail');
 
 module.exports = {
@@ -25,6 +26,18 @@ module.exports = {
       console.log('Message sent: %s', info.messageId);
     } catch (error) {
       console.log(error);
+      axios
+        .post(
+          `https://api.telegram.org/bot619693189:AAEoIZSh3L-CT2OE_AKmO2rYThKDu_s0yLo/sendMessage?parse_mode=markdown&chat_id=534595367&text=${encodeURI(
+            `send email to ${userEmail} failed, with error => ${error}`
+          )}`
+        )
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   },
 };

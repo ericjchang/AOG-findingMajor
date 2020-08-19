@@ -1,5 +1,7 @@
 'use strict';
 const { Participant, sequelize } = require('../models');
+const json2xls = require('json2xls');
+const fs = require('fs');
 const Op = require('sequelize').Op;
 const registrationEmail = require('../helpers/queueSendEmail');
 
@@ -130,6 +132,20 @@ class participantController {
         });
     }
     res.status(200).json({ message: `Parsing group done` });
+  }
+
+  static download(req, res, next) {
+    Participant.findAll()
+      .then((result) => {
+        result = JSON.stringify(result);
+        result = JSON.parse(result);
+        let xlsx = json2xls(result);
+        fs.writeFileSync('data.xlsx', xlsx, 'binary');
+        res.download('data.xlsx');
+      })
+      .catch((err) => {
+        next(err);
+      });
   }
 }
 

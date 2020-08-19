@@ -8,6 +8,7 @@ routes.post('/email', Controller.findEmail);
 routes.get('/', Controller.findAll);
 routes.get('/count', Controller.groupAndCount);
 routes.get('/parse', Controller.parseGroup);
+routes.get('/download', Controller.download);
 routes.put('/:id', Controller.update);
 routes.delete('/:id', Controller.delete);
 

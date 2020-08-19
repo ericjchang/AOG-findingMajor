@@ -111,7 +111,7 @@ class participantController {
     let count = 0; // total participants
     let group = 1; // total group
     for (let i = 13; i <= 244; i++) {
-      if (count === 43) {
+      if (count === 54) {
         count = 0;
         group++;
       }
